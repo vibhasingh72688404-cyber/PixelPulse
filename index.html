@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskFlow · a type-safe task board</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Pixel Pulse</h1>
-    <h1>helllooo</h1>
+  <main class="wrap">
+    <header>
+      <h1>Task<span>Flow</span></h1>
+      <p class="tag">A type-safe task board built with TypeScript</p>
+    </header>
+
+    <div class="addrow">
+      <input id="title" placeholder="What needs doing?" autocomplete="off" />
+      <select id="status" aria-label="Initial status">
+        <option value="todo">todo</option>
+        <option value="in-progress">in-progress</option>
+        <option value="done">done</option>
+      </select>
+      <button id="add">Add</button>
+    </div>
+
+    <div id="chips" class="chips"></div>
+    <ul id="list"></ul>
+    <p id="count" class="count"></p>
+  </main>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
